@@ -1,0 +1,18 @@
+package com.multipleconstructor;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App1 {
+	public static void main(String[] args) {
+		System.out.println("project execution is started------");
+		ClassPathXmlApplicationContext c= new ClassPathXmlApplicationContext("com/multipleconstructor/NewFile.xml");
+	Test1 a=c.getBean("test1",Test1.class);
+	a.add();
+	System.out.println(a);
+	
+	System.out.println("project execution is ended-----");
+	}
+
+}
+
+

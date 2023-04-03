@@ -1,0 +1,16 @@
+package dataandalgorithm;
+
+public class FindMissingNumberInAnArray {
+public static void main(String[] args) {
+	int a[]= {1,2,3,5};
+	int sum=0;
+	for(int i=0;i<a.length;i++)
+	{
+		sum=sum+a[i];
+	}
+	int p=5*(5+1)/2;
+	System.out.println(p);
+	System.out.println(sum);
+	System.out.println(p-sum);
+}
+}

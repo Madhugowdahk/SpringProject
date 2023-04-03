@@ -1,0 +1,5 @@
+package constructordependencyinject;
+
+public class Student {
+
+}

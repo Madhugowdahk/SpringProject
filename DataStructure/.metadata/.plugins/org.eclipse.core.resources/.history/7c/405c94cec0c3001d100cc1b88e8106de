@@ -1,0 +1,29 @@
+package LibraryManagementSystem;
+
+import java.util.ArrayList;
+
+public class Main {
+	
+		public static void main(String[] args) {
+			
+		
+	
+Book book1=new Book(0, "java", null, null, null, 0);
+
+Book book2=new Book(0, "c++", null, null, null, 0);
+
+Book book3=new Book(0, "python", null, null, null, 0);
+
+ArrayList< Book>a=new ArrayList<>();
+a.add(book1);
+a.add(book2);
+a.add(book3);
+
+for(Book b:a)
+{
+	System.out.println(b);
+}
+
+}
+
+}

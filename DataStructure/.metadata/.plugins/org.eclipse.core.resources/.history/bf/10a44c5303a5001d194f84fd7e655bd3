@@ -1,0 +1,11 @@
+package exception;
+
+public class Child {
+public static void women()
+{
+	System.out.println("both men and women are not equal");
+}
+public static void main(String[] args) {
+	women();
+}
+}

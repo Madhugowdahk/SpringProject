@@ -1,0 +1,8 @@
+package javapatterns;
+
+public class IntegerValueOfMethod {
+public static void main(String[] args) {
+	Integer obj=new Integer(10);
+	System.out.println("object value of="+obj.valueOf(-20));
+}
+}

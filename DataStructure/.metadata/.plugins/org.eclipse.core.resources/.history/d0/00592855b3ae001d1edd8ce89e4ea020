@@ -1,0 +1,13 @@
+package javapatterns;
+
+public class ParseInt {
+public static void main(String[] args) {
+	String s="mad";
+	int dec=Integer.parseInt("20");
+	int rad=Integer.parseInt("20",6);
+	int sid=Integer.parseInt("geeks",29);
+	System.out.println(dec);
+	System.out.println(rad);
+	System.out.println(sid);
+}
+}

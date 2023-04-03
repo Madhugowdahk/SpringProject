@@ -1,0 +1,27 @@
+package LibraryManagementSystem;
+
+public class program {
+	public static void main(String[] args) {
+		
+	
+String name="my city is banglore";
+String s=" ";
+String s1=" ";
+for(int i=0;i<name.length();i++)
+{
+	if(i%2!=0)
+	{
+		s=s+s.charAt(i);
+	}
+	if(i%2==0)
+	{
+		s1=s1+name.charAt(i);
+		
+	}
+	System.out.println(s);
+	System.out.println(s1);
+	
+}
+
+	}
+}

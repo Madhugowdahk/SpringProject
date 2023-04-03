@@ -1,0 +1,96 @@
+package com.serve;
+
+
+
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.mysql.cj.xdevapi.PreparableStatement;
+
+
+public class Getservlet extends HttpServlet {
+	//String path="com.mysql.cj.jdbc.Driver";
+	//String url="jdbc:mysql://localhost:3306/atmedet";
+	//String username="root";
+	//String password="root";
+	Connection cn=null;
+	PreparedStatement pst=null;
+	ResultSet resultSet=null;
+	PrintWriter pw=null;
+	String Query="select* from EEEdet where name=? and password=?";
+	
+public void init()
+
+{
+	try {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/atmedet","root","root");
+		
+	}catch (Exception e) {
+		// TODO: handle exception
+	}
+}
+public void service(HttpServletRequest req,HttpServletResponse ren)
+{
+	try {
+		String id1=req.getParameter("id");
+		String passw=req.getParameter("password");
+		if(id1.length()==0||passw.length()==0)
+		{
+			ren.sendRedirect("/universityresult1/invalid.html");
+		}
+		else {
+	pst=cn.prepareStatement(Query);
+	pst.setString(1, id1);
+	pst.setString(2,passw );
+	resultSet=pst.executeQuery();
+	if(resultSet.next())
+	{
+		int id=resultSet.getInt("id");
+		int m1=resultSet.getInt("marks1");
+		int m2=resultSet.getInt("marks2");
+		int m3=resultSet.getInt("marks3");
+		String password=resultSet.getString("password");
+		pw.println(id1+" "+m1+" "+m2+" "+m3+" "+passw);
+	}
+	else
+	{
+		ren.sendRedirect("/universityresult1/invalid.html");
+	}
+		}
+	{
+		
+	}
+	
+	}catch (Exception e) {
+		e.printStackTrace();// TODO: handle exception
+	}
+	
+}
+public void destroy()
+{
+	try {
+		cn.close();
+		pst.close();
+		resultSet.close();
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}	
+}
+}
+
+
+

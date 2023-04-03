@@ -1,0 +1,54 @@
+package datastructure;
+// Java program for reversal algorithm of array rotation
+	import java.io.*;
+
+	class LeftRotate{
+		/* Function to left rotate arr[] of size n by d */
+		static void leftRotate(int arr[], int d)
+		{
+
+			if (d == 0) {
+				return;
+			}
+			int n = arr.length;
+			int []s=new int[arr.length];
+			int c=0;
+			int j=0;
+			for(int i=0;i<arr.length;i++) {
+			 if (d == arr[i]) {
+				 c++;
+				 j=i;
+				 break;
+				 }
+			 }
+			if(c==1)
+			{
+				for(int i=j;i<arr.length;i++)
+				{
+					s[j]=arr[j];
+				}
+			}
+		}
+
+		/*UTILITY FUNCTIONS*/
+		/* function to print an array */
+		static void printArray(int arr[])
+		{
+			for (int i = 0; i < arr.length; i++)
+				System.out.print(arr[i] + " ");
+		}
+
+		/* Driver program to test above functions */
+		public static void main(String[] args)
+		{
+			int arr[] = { 1, 2, 3, 4, 5, 6, 7 };
+			int n = arr.length;
+			int d = 2;
+
+			leftRotate(arr, d); // Rotate array by d
+			printArray(arr);
+		}
+	}
+	/*This code is contributed by Devesh Agrawal*/
+
+

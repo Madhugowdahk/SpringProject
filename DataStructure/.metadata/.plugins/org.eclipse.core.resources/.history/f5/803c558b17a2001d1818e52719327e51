@@ -1,0 +1,20 @@
+package exception;
+
+public class Try6 {
+static void sleep() throws InterruptedException
+{
+	for(int i=1;i<=10;i++)
+	{
+		System.out.println(i);
+		Thread.sleep(2000);
+	}
+}
+public static void main(String[] args) {
+	try {
+		sleep();
+	}
+	catch (InterruptedException e) {
+		e.printStackTrace();// TODO: handle exception
+	}
+}
+}

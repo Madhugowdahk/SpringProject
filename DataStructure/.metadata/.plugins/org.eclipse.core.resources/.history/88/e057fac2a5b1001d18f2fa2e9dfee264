@@ -1,0 +1,30 @@
+class LL{
+    Node head;
+    class Node{
+        String data;
+        Node next;
+        Node(String data,Node next)
+        {
+            this.data=data;
+            this.next=null;
+        }
+    }
+    public static  addFirst(String data) {
+        Node newnode=new Node(data);
+        if(head==null)
+        {
+        head=newnode;
+        return;
+            
+        }
+        newnode.next=head;
+        head=newnode;
+        
+    }
+    Public static void main(String []srgs)
+    {
+        LL l=new LL();
+        l.addFirst("is");
+        l.addFirst("this");
+    }
+}

@@ -1,0 +1,14 @@
+package dataandalgorithm;
+
+import java.util.LinkedList;
+
+public class Lk {
+public static void main(String[] args) {
+	LinkedList<String>l=new LinkedList<String>();
+	l.add("this");
+	l.add("is");
+	l.add("a");
+	l.add("java");
+	System.out.println(l);
+}
+}

@@ -1,0 +1,24 @@
+package datastructure;
+
+public class AddingReversingTwoStrings {
+	public static void reverse(String s)
+	{
+		
+		String s1="";
+		String s2="";
+		for(int i=0;i<s.length()/2;i++)
+		{
+			s1=s1+s.charAt(i);
+		}
+		for(int i=s.length()/2;i<s.length();i++)
+		{
+			s2=s2+s.charAt(i);
+		}
+		String n="";
+		System.out.println(s1+" "+s2);
+	}
+public static void main(String[] args) {
+	String s="carbohydrates";
+	reverse(s);
+}
+}

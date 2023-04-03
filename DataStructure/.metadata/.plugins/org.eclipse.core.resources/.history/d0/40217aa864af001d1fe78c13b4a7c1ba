@@ -1,0 +1,12 @@
+package dataandalgorithm;
+
+public class CharToArray {
+public static void main(String[] args) {
+	char []n= {'a','b','c','d'};
+	String s=new  String(n);
+	String s1=new String().valueOf(n);
+	System.out.println(s+" "+s1);
+	
+	
+}
+}

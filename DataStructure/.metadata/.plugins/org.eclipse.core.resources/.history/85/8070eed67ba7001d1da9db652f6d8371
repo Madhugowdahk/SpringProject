@@ -1,0 +1,24 @@
+package dataandalgorithm;
+
+public class ResizeAnArray {
+	public static int [] resize(int[]a,int capacity)
+	{
+		int []temp=new int[capacity];
+		for(int i=0;i<a.length;i++)
+		{
+			temp[i]=a[i];
+		}
+		
+		return temp;
+	
+	}
+public static void main(String[] args) {
+	int []a= {1,2,3,4,5};
+	a=resize(a,a.length*2);
+	for(int i=0;i<a.length;i++)
+	{
+		System.out.println(a[i]);
+	}
+
+}
+}

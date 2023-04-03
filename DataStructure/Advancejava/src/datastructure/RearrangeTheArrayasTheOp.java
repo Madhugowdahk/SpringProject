@@ -1,0 +1,29 @@
+package datastructure;
+
+public class RearrangeTheArrayasTheOp {
+	public static  void rev(int []a,int n)
+	{
+		int []ans=new int[n+1];
+		int large=a.length-1;
+		int small=0;
+		
+		for(int i=0;i<a.length;i++)
+		{
+			
+				ans[i]=a[large--];
+				ans[i+1]=a[small++];
+			
+			
+			
+		}
+		for(int s:ans)
+		{
+			System.out.println(s+" ");
+		}
+	}
+public static void main(String[] args) {
+	int []a= {1,2,3,4,5,6,7};
+	//op:7,1,6,2,5,3,4};
+	rev(a,a.length);
+}
+}

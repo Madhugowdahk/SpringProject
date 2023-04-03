@@ -1,0 +1,28 @@
+package datastructure;
+
+public class MoveZeroesToEnd {
+	public static void moveToZero(int []a,int s)
+	{
+		int count=0;
+		for(int i=0;i<a.length;i++)
+		{
+			if(a[i]!=0)
+			{
+				a[count]=a[i];
+				count++;
+			}
+		}
+		for(int i=0;i<a.length;i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+		
+		
+		
+		
+	}
+public static void main(String[] args) {
+	int []a= {0,0,0,1,2,3,4};
+	moveToZero(a,a.length);
+}
+}

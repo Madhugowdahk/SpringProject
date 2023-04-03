@@ -1,0 +1,30 @@
+package valueascschema;
+
+public class Music {
+	
+	String singer;
+	int songs;
+	
+	public Music(String singer, int songs) {
+		super();
+		this.singer = singer;
+		this.songs = songs;
+	}
+	public String getSinger() {
+		return singer;
+	}
+	public void setSinger(String singer) {
+		this.singer = singer;
+	}
+	public int getSongs() {
+		return songs;
+	}
+	public void setSongs(int songs) {
+		this.songs = songs;
+	}
+	@Override
+	public String toString() {
+		return "Music [singer=" + singer + ", songs=" + songs + "]";
+	}
+	
+}

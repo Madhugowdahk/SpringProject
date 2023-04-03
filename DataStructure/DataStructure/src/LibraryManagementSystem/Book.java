@@ -1,0 +1,79 @@
+package LibraryManagementSystem;
+
+public class Book {
+
+int id;
+String bookname;
+String category;
+String author;
+String  publisher;
+int noofpages;
+
+Book(int id,String bookname,String category,String author,String publisher,int noofpages)
+{
+	this.id=id;
+	this.bookname=bookname;
+	this.category=category;
+	this.author=author;
+	this.publisher=publisher;
+	this.noofpages=noofpages;
+}
+
+@Override
+public String toString() {
+	return "Book [id=" + id + ", bookname=" + bookname + ", category=" + category + ", author=" + author
+			+ ", publisher=" + publisher + ", noofpages=" + noofpages + "]";
+}
+
+public int getId() {
+	return id;
+}
+
+public void setId(int id) {
+	this.id = id;
+}
+
+public String getBookname() {
+	return bookname;
+}
+
+public void setBookname(String bookname) {
+	this.bookname = bookname;
+}
+
+public String getCategory() {
+	return category;
+}
+
+public void setCategory(String category) {
+	this.category = category;
+}
+
+public String getAuthor() {
+	return author;
+}
+
+public void setAuthor(String author) {
+	this.author = author;
+}
+
+public String getPublisher() {
+	return publisher;
+}
+
+public void setPublisher(String publisher) {
+	this.publisher = publisher;
+}
+
+public int getNoofpages() {
+	return noofpages;
+}
+
+public void setNoofpages(int noofpages) {
+	this.noofpages = noofpages;
+}
+
+
+
+
+}

@@ -1,0 +1,9 @@
+package exception;
+
+public class Man {
+public static void women()
+{
+	System.out.println("both men and women are equal");
+}
+
+}

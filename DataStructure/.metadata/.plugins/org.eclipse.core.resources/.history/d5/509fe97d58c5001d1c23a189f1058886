@@ -1,0 +1,12 @@
+package logic;
+import java.io.*;
+import java.math.BigInteger;
+import java.util.*;
+public class Regex {
+public static void main(String[] args) {
+	System.out.println("enter a long number");
+	Scanner ip=new Scanner(System.in);
+	BigInteger nextBigInteger=ip.nextBigInteger();
+	System.out.println(nextBigInteger);
+}
+}

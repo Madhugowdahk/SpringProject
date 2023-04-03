@@ -1,0 +1,17 @@
+package valueascschema;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class TestTheHusband {
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext c=new ClassPathXmlApplicationContext("valueascschema/springconfigure.xml");
+		Husband h=(Husband)c.getBean("xml");
+		Husband h1=(Husband) c.getBean("yml");
+		System.out.println(h);
+		System.out.println(h1);
+
+
+
+
+	}
+}

@@ -1,0 +1,13 @@
+package com.valueasattribute;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext c = 
+				new ClassPathXmlApplicationContext("com/valueasattribute/springconfig.xml");
+
+	}
+
+}

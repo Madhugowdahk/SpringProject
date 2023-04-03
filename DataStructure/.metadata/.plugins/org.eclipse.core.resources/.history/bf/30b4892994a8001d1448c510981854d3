@@ -1,0 +1,68 @@
+package dataandalgorithm;
+
+public class LL {
+	//nodes is used to store the data and  it represent in the form of class
+	Node head;
+	class Node{
+		String data;
+		Node next;
+		Node(String data)
+		{
+			this.data=data;
+			this.next=null;
+		}
+	}
+		//add first-last
+		public void addFirst(String data)
+		{
+			Node newnode=new Node(data);
+			if(head == null)
+			{
+				head=newnode;
+				return;
+			}
+			newnode.next=head;
+			head=newnode;
+			
+		}
+		//addlast
+		public void addLast(String data)
+		{
+			Node newnode=new Node(data);
+			if(head==null)
+			{
+				head=newnode;
+				return;
+			}
+			Node currnode=head;
+			while(currnode.next!=null)
+			{
+				
+				currnode=currnode.next;
+			}
+			currnode.next=newnode;
+		}
+	//print
+		public void printlist()
+		{
+			if(head==null)
+			{
+				System.out.println("list is empty");
+				return;
+			}
+			Node currNode=head;
+			while(currNode!=null)
+			{
+				System.out.println(currNode.data+" -->");
+				currNode=currNode.next;
+			}
+		}
+		
+	
+public static void main(String[] args) {
+	LL list=new LL();
+	list.addFirst("a");
+	list.addFirst("list");
+}
+
+}

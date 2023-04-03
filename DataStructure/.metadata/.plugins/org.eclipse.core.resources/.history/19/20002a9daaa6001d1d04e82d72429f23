@@ -1,0 +1,42 @@
+package ListPractice;
+
+import java.util.Scanner;
+
+public class RemoveDuplicateElementsUsingAnotherArrays {
+	public static void remove(int []a,int size)
+	{
+		int []c=new int [size];
+		
+		for(int i=0;i<a.length;i++)
+		{
+		for(int  j=i+1;j<a.length;j++)
+		{
+			if(a[i]==a[j])
+			{
+				a[i]='\0';
+			}
+		}
+		
+		}
+		for(int i=0;i<a.length;i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+		
+		
+		
+	}
+public static void main(String[] args) {
+	Scanner ip=new Scanner(System.in);
+	System.out.println("enter a size of an array");
+	int size=ip.nextInt();
+	int []a=new int[size];
+	System.out.println("enter elements of an array");
+	for(int i=0;i<size;i++)
+	{
+		a[i]=ip.nextInt();
+	}
+	
+	remove(a,size);
+}
+}

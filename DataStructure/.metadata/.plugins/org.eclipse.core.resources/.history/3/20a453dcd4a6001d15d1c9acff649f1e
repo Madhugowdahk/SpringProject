@@ -1,0 +1,28 @@
+package javapatterns;
+
+public class TrimorphicNumbers {
+	public static boolean trim(int n,int raw)
+	{
+	   int cube=n*n*n;
+	   
+	   
+	     int rem=cube%10;
+	   if(rem==raw)
+	   {
+		   return true;
+	   }
+	   return false;
+	}
+public static void main(String[] args) {
+	int raw=0;
+	for(int i=1;i<=100;i++)
+	{
+		raw=i%10;
+		if(trim(i,raw))
+		{
+			System.out.println(i);
+		}
+	}
+	
+}
+}

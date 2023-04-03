@@ -1,0 +1,67 @@
+package com;
+
+
+	import java.io.*;
+	import java.sql.*;
+	import javax.servlet.ServletException;
+	import javax.servlet.ServletResponse;
+	import javax.servlet.annotation.WebServlet;
+	import javax.servlet.http.HttpServlet;
+	import javax.servlet.http.HttpServletRequest;
+	import javax.servlet.http.HttpServletResponse;
+	//@WebServlet("/GetResult")
+	public class GetResult extends HttpServlet {
+		String path="com.mysql.cj.jdbc.Driver";
+		String url="jdbc:mysql://localhost:3306/university";
+		String user="root";
+		String pw="root";
+		String query="select*from kodenest";
+		Connection con=null;
+		Statement stat=null;
+		ResultSet res=null;
+		PrintWriter pw1=null;
+		public void init()
+		{
+			//initialization logic
+			try {
+				Class.forName(path);
+				con=DriverManager.getConnection(url,user, pw);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		public void service(HttpServletRequest req,HttpServletResponse ren)
+		{
+	try {
+		PrintWriter pw1=((ServletResponse) res).getWriter();
+		stat=con.createStatement();
+		res=stat.executeQuery(path);
+		while(res.next()==true)
+		{
+			int id=res.getInt("id");
+			String name=res.getNString("name");
+			int m1=res.getInt("m1");
+			int m2=res.getInt("m2");
+			int m3=res.getInt("m3");
+			int avg=res.getInt("avg");
+			pw1.println(id+" "+name+" "+m1+" "+m2+" "+m3+" ");}
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}}
+	public void destroy()
+		{
+	try {
+		con.close();
+		pw1.close();
+		stat.close();
+		res.close();
+	}
+	catch (Exception e) {
+		e.printStackTrace();// TODO: handle exception
+	}
+		}
+	}
+
+

@@ -1,0 +1,9 @@
+package javapatterns;
+
+public class ParseInt {
+public static void main(String[] args) {
+	String s="mad";
+	Integer obj=new Integer(s);
+	System.out.println(obj);
+}
+}

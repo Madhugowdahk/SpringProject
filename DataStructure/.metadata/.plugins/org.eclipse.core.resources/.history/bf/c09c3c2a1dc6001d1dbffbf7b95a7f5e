@@ -1,0 +1,17 @@
+package logic;
+
+
+import java.util.Arrays;
+
+public class Lexicographically {
+public static void main(String[] args) {
+	String s="this world is full of ops";
+	String []spilt=s.split(" ");
+	Arrays.sort(spilt);
+	for(String s1:spilt)
+	{
+		System.out.println(s1);
+	}
+	
+}
+}

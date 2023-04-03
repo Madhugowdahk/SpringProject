@@ -1,0 +1,35 @@
+package datastructure;
+
+public class RearrangeTheArrayasTheOp {
+	public static  void rev(int []a,int n)
+	{
+		int []ans=new int[n];
+		int large=a.length-1;
+		int small=0;
+		int max=a[0];
+		int min=a[0];
+		int c=0;
+		boolean flag=true;
+		for(int i=0;i<a.length;i++)
+		{
+			if(flag)
+			{
+				ans[i]=a[large--];
+			}
+			else
+			{
+				ans[i]=a[small++];
+			}
+			c++;
+			if(a.length==c)
+			{
+				flag=false;
+			}
+		}
+	}
+public static void main(String[] args) {
+	int []a= {1,2,3,4,5,6,7};
+	//op:7,1,6,2,5,3,4};
+	rev(a,a.length);
+}
+}

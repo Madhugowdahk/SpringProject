@@ -1,0 +1,29 @@
+package ListPractice;
+
+import java.util.Scanner;
+
+public class ShowingElementsofAMatrix {
+public static void main(String[] args) {
+	Scanner ip=new Scanner(System.in);
+	System.out.println("enter a rows");
+	int rows=ip.nextInt();
+	System.out.println("enter a cols");
+	int cols=ip.nextInt();
+	int [][]a=new int [rows][cols];
+	System.out.println("enter a values ");
+	for(int i=0;i<a.length;i++)
+	{
+		for(int j=0;j<a.length;j++)
+		{
+			a[i][j]=ip.nextInt();
+		}
+	}
+	for(int i=0;i<a.length;i++)
+	{
+		for(int j=0;j<a.length;j++)
+		{
+			System.out.println(a[i][j]+" ");
+		}
+	}
+}
+}

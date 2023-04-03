@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+		xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean class="collectiontypeinjection.Employe" name="emp1 ">
+    <property name=" phono">
+    <list>
+    <value>22222222</value>
+    <value>55555555</value>
+    <value>88888888</value>
+    </list>
+    </property>
+    <property name="email">
+    <set>
+    <value>madhu@123</value>
+    <value>nadhh@123</value>
+    </set>
+    </property>
+    <property name="name">
+    <map>
+    <entry key="123" value="madhu"/>
+    <entry key="13" value="maaadhu"/>
+    <entry key="1233" value="ma1dhu"/>
+    </map>
+    </property>
+    </bean>
+	</beans>

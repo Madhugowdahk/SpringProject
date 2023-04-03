@@ -1,0 +1,22 @@
+package datastructure;
+
+import java.util.Arrays;
+
+public class ReplaceANumberToEvenPosition {
+	
+	public static void rev(int []a,int n)
+	{
+		Arrays.sort(a);
+		for(int s:a)
+		{
+			System.out.print(s+" ");
+		}
+		int []ans=new int [n];
+		int p=0;
+		
+	}
+public static void main(String[] args) {
+	int []a= {1,2,3,4,5};
+	rev(a,a.length);
+}
+}

@@ -1,0 +1,14 @@
+class-flipkart
+tab name-items-id,name,cost,qunatity,color,brand
+flipkartdatabase-databasename
+
+
+another table-customer-id,name,age,phoneno,gender
+
+save(item+customer)
+update based id,brand-item
+update-based id,age
+get all data based on the customer id
+get all data based on the items id
+get the data based on color and rating is more than4.5
+get the customer whose phone no starts with 96

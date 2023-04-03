@@ -1,0 +1,13 @@
+package valueascschema;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MusicSolution {
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext c =
+				new ClassPathXmlApplicationContext("valueascschema/MusicConfiguration.xml");
+		
+		Music m = (Music)c.getBean("madhu");
+		System.out.println(m);
+	}
+}
